@@ -45,14 +45,14 @@ buildroot-at91/output/host/bin/arm-buildroot-linux-gnueabi-gcc test.c -o test
 ```
 **Add executable permissionsm (Device)**
 ```bash
-#chmod +x ./test
+chmod +x ./test
 ```
 **Execute program (Device)**
 ```bash
 ./test
 ```
 
-## Transfer files
+## Transfer file
 ### Send using XMODEM
 **Waiting to receive (Device)**  
 ```bash
