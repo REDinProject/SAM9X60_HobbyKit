@@ -15,10 +15,9 @@ git checkout linux4sam-2022.10 -b buildroot-at91-linux4sam-2022.10
 ```
 **Build the rootfs image**
 ```bash
-cd ~/Linux4Microchip/buildroot-at91/
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin
-BR2_EXTERNAL=../buildroot-external-microchip/ make sam9x60_curiosity_graphics_defconfig
-make
+cd ~/Linux4Microchip/buildroot-at91/
+BR2_EXTERNAL=../buildroot-external-microchip/ make sam9x60_curiosity_graphics_defconfig make
 
 ls ./output/images/
 ```
@@ -41,6 +40,7 @@ make dt-overlay-mchp-rebuild
 ```  
 **Build the SDK (optional)**
 ```bash
+export PATH=/usr/sbin:/usr/bin:/sbin:/bin
 cd ~/Linux4Microchip/buildroot-at91/
 make sdk
 
