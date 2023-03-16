@@ -58,21 +58,21 @@ find ./arm-buildroot-linux-gnueabi_sdk-buildroot -name arm-buildroot-linux-gnuea
 ## Cross-compiler and Execute program
 **Compile the executable file for SAM9X60 MPU**
 ```bash
-cd ~/Linux4Microchip
-buildroot-at91/output/host/bin/arm-buildroot-linux-gnueabi-gcc test.c -o test
+~/Linux4Microchip/buildroot-at91/output/host/bin/arm-buildroot-linux-gnueabi-gcc test.c -o test
 ```
-**Add executable permissionsm (Device)**
+
+**Add executable permissionsm (Platform)**
 ```bash
 chmod +x ./test
 ```
-**Execute program (Device)**
+**Execute program (Platform)**
 ```bash
 ./test
 ```
 
 ## Transfer file
 ### Send using XMODEM
-**Waiting to receive (Device)**  
+**Waiting to receive (Platform)**  
 ```bash
 rx test
 ```
