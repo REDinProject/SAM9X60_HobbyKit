@@ -15,9 +15,12 @@ git checkout linux4sam-2022.10 -b buildroot-at91-linux4sam-2022.10
 ```
 **Build the rootfs image**
 ```bash
+cd ~/Linux4Microchip/buildroot-at91/
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin
 BR2_EXTERNAL=../buildroot-external-microchip/ make sam9x60_curiosity_graphics_defconfig
 make
+
+ls ./output/images/
 ```
 **Adding/removing packages from the rootfs**
 ```bash
@@ -36,9 +39,20 @@ make uboot-rebuild
 make linux-rebuild
 make dt-overlay-mchp-rebuild
 ```  
-**Build the SDK**
+**Build the SDK (optional)**
 ```bash
+cd ~/Linux4Microchip/buildroot-at91/
 make sdk
+
+ls ./output/images/
+```
+
+**Install the SDK (optional)**
+```bash
+cd ~/Linux4Microchip/
+tar -xvf arm-buildroot-linux-gnueabi_sdk-buildroot.tar.gz
+./arm-buildroot-linux-gnueabi_sdk-buildroot/relocate-sdk.sh
+find ./arm-buildroot-linux-gnueabi_sdk-buildroot -name arm-buildroot-linux-gnueabi-gcc
 ```
 
 ## Cross-compiler and Execute program
