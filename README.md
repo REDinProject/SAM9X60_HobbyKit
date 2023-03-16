@@ -35,6 +35,10 @@ make uboot-rebuild
 ```bash
 make linux-rebuild
 make dt-overlay-mchp-rebuild
+```  
+**Build the SDK**
+```bash
+make sdk
 ```
 
 ## Cross-compiler and Execute program
